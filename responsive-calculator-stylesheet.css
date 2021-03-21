@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap');
+
+:root {
+    --button-color: #2d3142;
+    --button-color-hover: #4f5d75;
+    --button-color-click: #ef8354;
+    --border-color: #bfc0c0;
+    --input-output-color: #bfc0c0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#content {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-output-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 3px solid var(--button-color);
+    border-bottom: none;
+    width: 17.6em;
+    height: 6em;
+    justify-content: space-between;
+}
+
+#input {
+    text-align: right;
+    padding: 5px 10px;
+    font-size: 2em;
+    font-weight: 500;
+    border-style: none;
+    outline-width: 0;
+    background: none;
+}
+
+#pre-calculation {
+    text-align: left;
+    color: var(--border-color);
+    padding: 8px;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.all-buttons-container,
+.squares-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.square-button {
+    min-width: 2.2em;
+    height: 2em;
+    border: 1px solid var(--border-color);
+    font-size: 2em;
+    color: white;
+    background-color: var(--button-color);
+    outline: none;
+}
+
+.side-operators-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.long-vertical-button {
+    border: 1px solid var(--border-color);
+    font-size: 2em;
+    flex-grow: 2;
+    color: white;
+    background-color: var(--button-color);
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#clear,
+#divide,
+#multiply,
+#subtract {
+    border-top-color: var(--button-color);
+}
+
+#subtract,
+#add,
+#equals {
+    border-right-color: var(--button-color);
+}
+
+#clear,
+#one,
+#four,
+#seven,
+#swap-sign {
+    border-left-color: var(--button-color);
+}
+
+.square-button:hover,
+.long-vertical-button:hover {
+    background: var(--button-color-hover);
+}
+
+.square-button:active,
+.long-vertical-button:active {
+    background: var(--button-color-click);
+}
+
+@media only screen and (min-width: 700px) {
+    .square-button {
+        min-width: 4.2em;
+    }
+    .input-output-container {
+        width: 33.6em;
+        height: 8em;
+        justify-content: space-between;
+    }
+    #input {
+        font-size: 2.4em;
+        padding: 8px 12px;
+    }
+    #pre-calculation {
+        font-size: 1.4em;
+    }
+  }
+
+@media only screen and (min-width: 1000px) {
+    .square-button {
+        min-width: 5.2em;
+        height: 3em;
+    }
+    .input-output-container {
+        width: 41.6em;
+        height: 10em;
+        justify-content: space-between;
+    }
+    #input {
+        font-size: 2.8em;
+        padding: 8px 15px;
+    }
+
+    #pre-calculation {
+        font-size: 1.8em;
+        padding: 8px 13px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Calculator</title>
+    <link rel="stylesheet" type="text/css" href="responsive-calculator-stylesheet.css">
+</head>
+<body>
+    <div id="content">
+        <div>
+            <div class="input-output-container">
+                <span class="pre-calculation" id="pre-calculation"></span>
+                <input type="text" name="input" id="input">
+            </div>
+            <div class="all-buttons-container">
+                <div>    
+                    <div class="squares-container">
+                        <button class="square-button" id="clear" onclick="clearInput()" value="clear">C</button>
+                        <button class="square-button" id="divide" onclick="divide()" value="/">/</button>
+                        <button class="square-button" id="multiply" onclick="multiply()" value="*">*</button>
+                    </div>
+                    <div class="squares-container">
+                        <button class="square-button" id="one" onclick="buttonClick(1)" value="1">1</button>
+                        <button class="square-button" id="two" onclick="buttonClick(2)" value="2">2</button>
+                        <button class="square-button" id="three" onclick="buttonClick(3)" value="3">3</button>
+                    </div>
+                    <div class="squares-container">
+                        <button class="square-button" id="four" onclick="buttonClick(4)" value="4">4</button>
+                        <button class="square-button" id="five" onclick="buttonClick(5)" value="5">5</button>
+                        <button class="square-button" id="six" onclick="buttonClick(6)" value="6">6</button>
+                    </div>
+                    <div class="squares-container">
+                        <button class="square-button" id="seven" onclick="buttonClick(7)" value="7">7</button>
+                        <button class="square-button" id="eight" onclick="buttonClick(8)" value="8">8</button>
+                        <button class="square-button" id="nine" onclick="buttonClick(9)" value="9">9</button>
+                    </div>
+                    <div class="squares-container">
+                        <button class="square-button" id="swap-sign" onclick="swapSign()" value="swap-sign">+/-</button>
+                        <button class="square-button" id="zero" onclick="buttonClick(0)" value="0">0</button>
+                        <button class="square-button" id="decimal-dot" onclick="addDecimal()" value=".">.</button>
+                    </div>
+                </div>
+                <div class="side-operators-container">
+                    <button class="square-button" id="subtract" onclick="subtract()" value="-">-</button>
+                    <button class="long-vertical-button" id="add" onclick="add()" value="+">+</button>
+                    <button class="long-vertical-button" id="equals" onclick="equals()" value="=">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="responsive-calculator-javascript.js"></script>
+</body>
+</html>
